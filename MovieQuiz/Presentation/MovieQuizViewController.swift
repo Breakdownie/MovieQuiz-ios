@@ -25,7 +25,7 @@ final class MovieQuizViewController: UIViewController {
         
         showAnswerResult(isCorrect: yesAnswer == currentQuestion.correctAnswer)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             sender.isEnabled = true
         }
     }
@@ -38,7 +38,7 @@ final class MovieQuizViewController: UIViewController {
         
         showAnswerResult(isCorrect: noAnswer == currentQuestion.correctAnswer)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             sender.isEnabled = true
         }
     }
