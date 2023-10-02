@@ -93,16 +93,12 @@ extension StatisticsServiceImpl: StatisticsService {
         self.gamesCount += 1
         
         let currentBestGame = BestGame(correctAnswers: correct, totalAnswers: total, date: Date())
-        print("Текущая лучшая игра: \(currentBestGame)")
         
         if let previousBestGame = bestGame  {
-            print("Предыдущая лучшая игра: \(previousBestGame)")
             if currentBestGame > previousBestGame {
-                print("Найдена новая лучшая игра")
                 bestGame = currentBestGame
             }
         } else {
-            print("Задание первичной лучшей игры")
             bestGame = currentBestGame
         }
     }
